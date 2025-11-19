@@ -1,0 +1,9 @@
+<h3 class="mb-4">Add a New Restaurant</h3>
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: @categories %>
+  <%= f.button :submit, class: "btn mt-3 btn-primary" %>
+<% end %>
+<%= link_to '< Cancel', restaurants_path, class: "btn btn-outline-primary my-3"%>

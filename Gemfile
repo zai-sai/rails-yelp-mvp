@@ -65,3 +65,5 @@ gem 'rails-controller-testing', group: [ :test ]
 
 # to remove the error ostruct.rb was loaded from the standard library, but will no longer be part of the default gems starting from Ruby 3.5.0.
 gem "ostruct"
+
+gem "faker"
