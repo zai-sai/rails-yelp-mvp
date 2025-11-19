@@ -1,9 +1,9 @@
 class ReviewsController < ApplicationController
-  def new
-    @review = Review.new
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @rating = (0..5)
-  end
+  # def new
+  #   @review = Review.new
+  #   @restaurant = Restaurant.find(params[:restaurant_id])
+  #   @rating = (0..5)
+  # end
 
   def create
     @review = Review.new(review_params)
@@ -12,7 +12,8 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      render :new, status: :unprocessable_content
+      @reviews = Review.where(restaurant_id: params[:restaurant_id])
+      render 'restaurants/show', status: :unprocessable_content
     end
   end
 
