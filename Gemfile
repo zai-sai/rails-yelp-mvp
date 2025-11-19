@@ -26,6 +26,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Use Simple Form for quick building and front end validation [https://github.com/heartcombo/simple_form]
+gem "simple_form"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -59,3 +62,6 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+# to remove the error ostruct.rb was loaded from the standard library, but will no longer be part of the default gems starting from Ruby 3.5.0.
+gem "ostruct"

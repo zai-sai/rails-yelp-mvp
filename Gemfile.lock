@@ -156,6 +156,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
+    ostruct (0.6.3)
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
@@ -233,6 +234,9 @@ GEM
       rspec-support (~> 3.13)
     rspec-support (3.13.6)
     securerandom (0.4.1)
+    simple_form (5.4.0)
+      actionpack (>= 7.0)
+      activemodel (>= 7.0)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -288,10 +292,12 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  ostruct
   puma (>= 5.0)
   rails (~> 7.1.6)
   rails-controller-testing
   rspec-rails
+  simple_form
   sprockets-rails
   sqlite3 (>= 1.4)
   stimulus-rails
