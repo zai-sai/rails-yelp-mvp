@@ -8,6 +8,7 @@
       <br>Address: <%= @restaurant.address %></p>
       <div id="reviews-container" class="mt-5">
         <h4>Reviews</h4>
+        <%= link_to 'Leave a Review', new_restaurant_review_path(@restaurant), class: "btn btn-sm btn-primary my-3"%>
         <% @reviews.each do |review| %>
           <div class="row mt-3">
             <div class="card text-bg-light shadow-sm">

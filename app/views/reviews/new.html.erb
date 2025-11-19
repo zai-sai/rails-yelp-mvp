@@ -1,0 +1,7 @@
+<h3 class="mb-4">Review <%= @restaurant.name %></h3>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :rating, collection: @rating%>
+  <%= f.input :content %>
+  <%= f.button :submit, class: "btn mt-3 btn-primary" %>
+<% end %>
+<%= link_to '< Cancel', restaurant_path(@restaurant), class: "btn btn-outline-primary my-3"%>
